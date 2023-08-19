@@ -1,0 +1,25 @@
+{% load static %}
+
+{% include  'common/navbar.html'%}
+
+<section class="projects" id="projects" style="background-color: white">
+    <h2 class="title">Audio Library</h2>
+    <div class="content">
+        {% for a in audio%}
+            <div class="project-card">
+                <div class="project-image">
+                    <img src= {{ a.cover.url }} />
+                </div>
+                <div class="project-info">
+                    <p class="project-category"> {{ a.title }} </p>
+                    <strong class="project-title">
+                        <span> {{ a.singer }} </span>
+                        <a href= "{{ a.link.url }}"" class="more-details">Spotify</a>
+                    </strong>
+                </div>
+            </div>
+        {% endfor %}        
+    </div>
+</section>
+
+{% include  'common/footer.html'%}

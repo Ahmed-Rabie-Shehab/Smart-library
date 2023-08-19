@@ -1,0 +1,58 @@
+{% load static %}
+
+{% comment %} {% include  'common/navbar.html'%} {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/registerStyle.css'%}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <title>Responsive Regisration Form </title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Signup Here</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label for="username">Username</label>
+                            <input type="text" placeholder="Enter username" name ="username" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Enter your email" name="email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="password1">Password</label>
+                            <input type="Password" placeholder="Enter password" name="password1" required>
+                        </div>
+
+                       
+                        <div class="input-field">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password" name="password2" required>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">Signup</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>       
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+{% comment %} {% include  'common/footer.html'%} {% endcomment %}

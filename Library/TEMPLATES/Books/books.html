@@ -1,0 +1,25 @@
+{% load static %}
+
+{% include  'common/navbar.html'%}
+
+<section class="projects" id="projects" style="background-color: white">
+    <h2 class="title">Books Library</h2>
+    <div class="content">
+        {% for b in book%}
+            <div class="project-card">
+                <div class="project-image">
+                    <img src= {{ b.cover.url }} />
+                </div>
+                <div class="project-info">
+                    <p class="project-category">{{ b.description }}</p>
+                    <strong class="project-title">
+                        <span>{{ b.title }}</span>
+                        <a href="#" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+        {% endfor %}   
+    </div>
+</section>
+
+{% include  'common/footer.html'%}

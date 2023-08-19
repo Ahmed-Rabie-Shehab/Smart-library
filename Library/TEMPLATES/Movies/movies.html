@@ -1,0 +1,26 @@
+{% load static %}
+
+{% include  'common/navbar.html'%}
+
+<section class="projects" id="projects" style="background-color: white">
+    <h2 class="title">Movies Library</h2>
+    <div class="content">
+        {% for m in movie%}
+            <div class="project-card">
+                <div class="project-image">
+                    <img src= {{ m.cover.url }} />
+                </div>
+                <div class="project-info">
+                    <p class="project-category"> {{ m.description }} </p>
+                    <strong class="project-title">
+                        <span> {{ m.title }} </span>
+                        <a href="#" class="more-details">IMDB</a>
+                    </strong>
+                </div>
+            </div>
+        {% endfor %}
+        
+    </div>
+</section>
+
+{% include  'common/footer.html'%}

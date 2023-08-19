@@ -1,0 +1,103 @@
+{% load static %}
+
+{% include  'common/navbar.html'%}
+
+<body>
+    <section class="main" style="background: url({%static 'img/back.jpg'%}) no-repeat;  background-size:cover;">
+        <div>
+            <h2><span>When in doubt go to the library</span><br></h2>
+            <h3>Read, watch and listen...</h3>
+            <h2><br><span>Make your day</span></h2>
+            <a href="#projects" class="main-btn">Go to your library</a>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards" id="parts">
+        <h2 class="title">library Parts</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <div class="info">
+                    <h3>Books</h3>
+                    <p>Great selection of modern and classic books waiting to be discovered. All free and available in most ereader formats.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="info">
+                    <h3>Movies</h3>
+                    <p>Stream hundreds of movies and TV shows on your computer, mobile device or TV. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+                <div class="info">
+                    <h3>Audio</h3>
+                    <p>Play Audio Library on SoundCloud and discover followers on SoundCloud | Stream tracks, albums, playlists on desktop and mobile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="title">Lastest Added To Library</h2>
+        <div class="content">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src= {{b.cover.url}} />
+                </div>
+                <div class="project-info">
+                    <p class="project-category"> {{ b.description }}</p>
+                    <strong class="project-title">
+                        <span>{{ b.title }}</span>
+                        <a href="#" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src= {{m.cover.url}} />
+                </div>
+                <div class="project-info">
+                    <p class="project-category"> {{ m.description }}</p>
+                    <strong class="project-title">
+                        <span>{{ m.title }}</span>
+                        <a href="#" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src= {{m2.cover.url}} />
+                </div>
+                <div class="project-info">
+                    <p class="project-category"> {{ m2.description }}</p>
+                    <strong class="project-title">
+                        <span>{{ m2.title }}</span>
+                        <a href="#" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards contact" id="contact">
+        <h2 class="title">Global librariess</h2>
+    </section>
+    
+    
+</body>
+
+{% include  'common/footer.html'%}
